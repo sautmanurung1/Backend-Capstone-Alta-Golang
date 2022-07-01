@@ -17,12 +17,7 @@ func NewAuthRepository(db *gorm.DB) domains.AuthRepository {
 }
 
 func (r *repositoryAuth) RegisterRepository(admin entities.Admin) error {
-	response := r.DB.Create(&admin)
-
-	if response.Error != nil {
-		return response.Error
-	}
-
+	r.DB.Create(&admin)
 	return nil
 }
 
