@@ -21,7 +21,7 @@ import (
 // @version 2.0
 // @host backend-capstone-alta-golang-staging.up.railway.app
 // @BasePath
-// @schemes http https
+// @schemes https http
 // @securityDefinitions.apiKey JWT
 // @in header
 // @name Authorization
@@ -47,5 +47,6 @@ func Server() *echo.Echo {
 	app.Use(middleware.CORS())
 
 	docs.SwaggerInfo.Host = os.Getenv("APP_HOST")
+
 	return app
 }
