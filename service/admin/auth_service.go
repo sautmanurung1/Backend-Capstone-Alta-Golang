@@ -48,7 +48,3 @@ func (s *svcAuth) LoginService(id_pegawai int, password string) (string, int) {
 func (s *svcAuth) GetUserService(id_pegawai int) (entities.Admin, error) {
 	return s.repo.GetUserRepository(id_pegawai)
 }
-
-func (s *svcAuth) UpdateUserService(id_pegawai int) (entities.Admin, error) {
-	return s.repo.UpdateUserRepository(id_pegawai)
-}
